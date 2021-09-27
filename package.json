@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dfuseop-exe/ExpressJsTutorial/issues"
   },
-  "homepage": "https://github.com/dfuseop-exe/ExpressJsTutorial#readme"
+  "homepage": "https://github.com/dfuseop-exe/ExpressJsTutorial#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
