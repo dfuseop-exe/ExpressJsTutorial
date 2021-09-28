@@ -6,7 +6,8 @@ const router = express.Router()
 
 
 router.get('/', (req , res)=>{
-    res.sendFile(path.join(__dirname , '../Templetes/index.html'))
+    // res.sendFile(path.join(__dirname , '../Templetes/index.html'))
+    res.render('home');
 })
 
 router.get('/blog', (req , res)=>{
