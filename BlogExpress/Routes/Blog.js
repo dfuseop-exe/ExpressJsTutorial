@@ -11,10 +11,15 @@ router.get('/', (req , res)=>{
 })
 
 router.get('/blog', (req , res)=>{
-    // blogs.forEach(e=>{
-    //     console.log(e.title);
+    //  blogs.forEach(e=>{
+    //      console.log(e);
     // })
-    res.sendFile(path.join(__dirname , '../Templetes/bloghome.html'))
+     
+
+    
+    res.render('blogHome' , {
+        blog : blogs
+    })
 })
 
 router.get('/blogpost/:slug', (req , res)=>{
@@ -25,9 +30,15 @@ router.get('/blogpost/:slug', (req , res)=>{
        return e.slug == req.params.slug
     })
 
-    console.log(myblog)
-    //  res.sendFile(path.join(__dirname , '../Templetes/blogpage.html'))
-    res.json(myblog);
+//myblog is a array         
+    res.render('blogPage' , {
+        title : myblog[0].title ,
+        content : myblog[0].content
+    })
+
+    // console.log(myblog)
+    // //  res.sendFile(path.join(__dirname , '../Templetes/blogpage.html'))
+    // res.json(myblog);
     
 })
 
